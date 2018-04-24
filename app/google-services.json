@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "636162814188-0s1cv8l0ckef0opcksjl9s91qlto6go8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shahar.userauthentication",
+            "certificate_hash": "ad5943da26137a8a924a2a564bf85c7061bcf759"
+          }
+        },
+        {
           "client_id": "636162814188-talnt71mmpbm8nkgoua1oc93gtp7rge1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

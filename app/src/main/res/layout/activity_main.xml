@@ -8,21 +8,102 @@
     tools:context="com.shahar.userauthentication.MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="252dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="367dp"
+        android:layout_height="244dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406">
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <Button
+                android:id="@+id/signInButton"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:onClick="onEmailPasswordAuthClick"
+                android:text="SIGN-IN" />
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:onClick="onEmailPasswordAuthClick"
+                android:text="SIGN-UP" />
+        </LinearLayout>
 
         <com.google.android.gms.common.SignInButton
-            android:id="@+id/googleBtn"
-            android:layout_width="141dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/loginGoogleButton"
+            android:layout_width="347dp"
+            android:layout_height="33dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="0dp"
             android:fadingEdge="none"></com.google.android.gms.common.SignInButton>
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/loginFacebookButton"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="144dp"
+        android:text="SKIP"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.87" />
 </android.support.constraint.ConstraintLayout>
